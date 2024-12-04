@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
+
 def before_all(context):
     """Before running any tests this method gets called and initializes browser for testing"""
     """Testing can be run in headless mode where the browser starts invisible mode but tests are run"""

@@ -93,6 +93,9 @@ def user_searches_for_reg_fill_the_details(context):
 @then('car details and the price will be retrieved and compared')
 def price_details_are_comapred(context):
     print(vehicle_data, context.car_details)
+    # vehicle data is the expected output format in file and context.car details is the data scraped from web
+    # we are comparing these 2 by reg numbers by looping both dicts and matching reg number
+    # The price is stored in dict 2 and not compared. But can be used to verify the price to compare
     for dict1 in vehicle_data:
         variant_reg1 = dict1.get('VARIANT_REG', '').replace(" ", "")
         for dict2 in context.car_details:
