@@ -21,6 +21,7 @@ def extract_car_registration_from_file(file_name):
     registrations = re.findall(pattern, text)
     return registrations
 
+
 file_name = 'car_input_v3.py'
 registrations = extract_car_registration_from_file(file_name)
 """The function will retrieve ['AD58 VNF', 'BW57 BOW', 'KT17DLX', 'SG18 HTN']"""
